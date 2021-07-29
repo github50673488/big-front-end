@@ -2,11 +2,11 @@
 
 // map
 const map = (array, fn) => {
-  let results = []
-  for (let value of array) {
-    results.push(fn(value))
-  }
-  return results
+    let results = []
+    for (let value of array) {
+        results.push(fn(value))
+    }
+    return results
 }
 
 // 测试
@@ -15,17 +15,16 @@ const map = (array, fn) => {
 // console.log(arr)
 
 
-
 // every
 const every = (array, fn) => {
-  let result = true
-  for (let value of array) {
-    result = fn(value)
-    if (!result) {
-      break
+    let result = true
+    for (let value of array) {
+        result = fn(value)
+        if (!result) {
+            break
+        }
     }
-  }
-  return result
+    return result
 }
 
 
@@ -36,14 +35,14 @@ const every = (array, fn) => {
 
 // some
 const some = (array, fn) => {
-  let result = false
-  for (let value of array) {
-    result = fn(value)
-    if (result) {
-      break
+    let result = false
+    for (let value of array) {
+        result = fn(value)
+        if (result) {
+            break
+        }
     }
-  }
-  return result
+    return result
 }
 
 // 测试
