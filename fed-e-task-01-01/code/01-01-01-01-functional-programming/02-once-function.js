@@ -38,6 +38,7 @@ const once = (fn) => {
     return function () {
         if (!done) {
             done = true
+            console.log('this -->', this)
             return fn.apply(this, arguments)// 在这个例子里头就要return了
         }
     }

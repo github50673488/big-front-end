@@ -22,7 +22,7 @@
 // }
 
 // ES6
-let checkAge = min => (age => age >= min)
+let checkAge = min => age => age >= min
 
 let checkAge18 = checkAge(18)
 let checkAge20 = checkAge(20)
