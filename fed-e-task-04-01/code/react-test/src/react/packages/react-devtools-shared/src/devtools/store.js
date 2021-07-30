@@ -494,7 +494,7 @@ export default class Store extends EventEmitter<{|
         // This does not correlate with their order in the tree.
         // So first we need to order them.
         // I wish we could avoid this sorting operation; we could sort at insertion time,
-        // but then we'd have to pay sorting costs even if the owners list was never used.
+        // but then we'd have to safePay sorting costs even if the owners list was never used.
         // Seems better to defer the cost, since the set of ids is probably pretty small.
         const sortedIDs = Array.from(unsortedIDs).sort(
           (idA, idB) =>

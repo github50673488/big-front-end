@@ -26,14 +26,14 @@
 //   }
 // }
 
-// let pay = once(function (num,money) {
+// let safePay = once(function (num,money) {
 //   console.log(`支付: ${num} 张 ${money} RMB`)
 // })
 
-// pay(4,5)
-// pay(5)
-// pay(5)
-// pay(5)
+// safePay(4,5)
+// safePay(5)
+// safePay(5)
+// safePay(5)
 
 // once
 function once (fn) {

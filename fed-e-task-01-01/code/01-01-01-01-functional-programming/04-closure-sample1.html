@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+<body>
+<script>
+    // Math.pow(4, 2)
+    // Math.pow(5, 2)
+
+    function makePower(power) {
+        return function (number) {
+            return Math.pow(number, power)
+        }
+    }
+
+    // 求平方
+    let power2 = makePower(2)
+    let power3 = makePower(3)
+
+    console.log(power2(4)) //  通过devtool去调试，再次进入power2的时候，访问到了 makePower闭包， 内部的power为2，由于外部 函数引用power2的存在，makePower函数里头的power这个数据（2）没有被释放
+    console.log(power2(5))//  通过devtool去调试，再次进入power2的时候，访问到了 makePower闭包， 内部的power为2，由于外部 函数引用power2的存在，makePower函数里头的power这个数据（2）没有被释放
+    console.log(power3(4))//  通过devtool去调试，再次进入power3的时候，访问到了 makePower闭包， 内部的power为3，由于外部 函数引用power3的存在，makePower函数里头的power这个数据（3）没有被释放
+
+</script>
+</body>
+</html>

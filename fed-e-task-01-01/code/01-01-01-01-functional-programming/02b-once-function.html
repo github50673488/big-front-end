@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const once = (fn) => {
+        let done = false
+        // return () => { //2100730  注意!! 这里不能改造成箭头函数，因为下面有this （运行时候的环境，正常的时候是window，改成箭头函数后就变成了定义时候上下文，调试的时候得到了undefined）！！
+        // https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this
+        return function () {
+            if (!done) {
+                done = true
+                return fn.apply(this, arguments)// 在这个例子里头就要return了
+            }
+        }
+    }
+
+    const unSafePay = money => {
+        return `支付: ${money} RMB`
+    }
+    let safePay = once(unSafePay)
+    console.log('safePay(5) -->', safePay(5))
+    console.log('safePay(5) -->', safePay(5))
+    console.log('safePay(5) -->', safePay(5))
+</script>
+</body>
+</html>
