@@ -1,8 +1,8 @@
-// lodash 中的 curry 基本使用 
+// lodash 中的 curry 基本使用
 const _ = require('lodash')
 
-function getSum (a, b, c) {
-  return a + b + c
+function getSum(a, b, c) {
+    return a + b + c
 }
 
 const curried = _.curry(getSum)
