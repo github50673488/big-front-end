@@ -14,12 +14,12 @@
 //   console.log('内层结束 i = ' + i)
 // }
 
-// for (var i = 0; i < 3; i++) {
-//   for (let i = 0; i < 3; i++) {
-//     console.log(i)
-//   }
-//   console.log('内层结束 i = ' + i)
-// }
+for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 3; i++) {
+        console.log(i)
+    }
+    console.log('内层结束 i = ' + i)
+}
 
 // let 应用场景：循环绑定事件，事件处理函数中获取正确索引 -----------------------------------------------------
 
@@ -41,13 +41,13 @@
 // }
 // elements[0].onclick()
 
-// var elements = [{}, {}, {}]
-// for (let i = 0; i < elements.length; i++) {
-//   elements[i].onclick = function () {
-//     console.log(i)
-//   }
-// }
-// elements[0].onclick()
+var elements = [{}, {}, {}]
+for (let i = 0; i < elements.length; i++) {
+    elements[i].onclick = function () {
+        console.log(i)
+    }
+}
+elements[2].onclick()
 
 // for 循环会产生两层作用域 ----------------------------------
 

@@ -38,7 +38,7 @@ function parseJSON (str) {
   try {
     return Right.of(JSON.parse(str))
   } catch (e) {
-    return Left.of({ error: e.message })
+      return Left.of({error: e.message})
   }
 }
 
@@ -46,5 +46,11 @@ function parseJSON (str) {
 // console.log(r)
 
 let r = parseJSON('{ "name": "zs" }')
-          .map(x => x.name.toUpperCase())
+    .map(x => x.name.toUpperCase())
+console.log(r)
+
+r = parseJSON('{ name: "zs" }')
+    .map(x => x.name.toUpperCase())
+    .map(x => x.name.toUpperCase())
+    .map(x => x.name.toUpperCase())
 console.log(r)

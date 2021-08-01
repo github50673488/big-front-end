@@ -8,7 +8,7 @@
 // const proxy = new Proxy(obj, {
 //   get (target, property) {
 //     console.log('watch logic~')
-    
+
 //     return Reflect.get(target, property)
 //   }
 // })
@@ -24,6 +24,7 @@ const obj = {
 // console.log(delete obj['age'])
 // console.log(Object.keys(obj))
 
+// 统一了对象的操作，体验很好！
 console.log(Reflect.has(obj, 'name'))
 console.log(Reflect.deleteProperty(obj, 'age'))
 console.log(Reflect.ownKeys(obj))

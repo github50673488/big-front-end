@@ -13,8 +13,8 @@ const arr = [100, 200, 300]
 // const [, , baz] = arr
 // console.log(baz)
 
-// const [foo, ...rest] = arr
-// console.log(rest)
+const [foo, ...rest] = arr
+console.log(rest)
 
 // const [foo, bar, baz, more] = arr
 // console.log(more)

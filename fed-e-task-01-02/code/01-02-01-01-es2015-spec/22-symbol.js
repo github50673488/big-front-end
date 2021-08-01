@@ -22,7 +22,7 @@
 // console.log(s)
 // console.log(typeof s)
 
-// 两个 Symbol 永远不会相等
+// 两个 Symbol 永远不会相等！！ 独一无二！！
 
 // console.log(
 //   Symbol() === Symbol()
@@ -43,10 +43,10 @@
 
 // // 也可以在计算属性名中使用
 
-// const obj = {
-//   [Symbol()]: 123
-// }
-// console.log(obj)
+const obj = {
+    [Symbol()]: 123
+}
+console.log(obj)
 
 // =========================================================
 
@@ -69,3 +69,5 @@ const person = {
 // 所以无法直接访问到 person 中的「私有」成员
 // person[Symbol()]
 person.say()
+
+//  Symbol的应用场景

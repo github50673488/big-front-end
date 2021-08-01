@@ -8,6 +8,7 @@ const match = _.curry(function (reg, str) {
     return str.match(reg)
 })
 
+// 固定化（消去）了第一个参数req
 const haveSpace = match(/\s+/g)
 const haveNumber = match(/\d+/g)
 

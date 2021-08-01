@@ -15,9 +15,9 @@ function ajax (url) {
     xhr.send()
   })
 }
-
-ajax('/api/foo.json').then(function (res) {
-  console.log(res)
+ajax('/api/post.json').then(function (res) {
+// ajax('/api/foo.json').then(function (res) {
+    console.log(res)
 }, function (error) {
-  console.log(error)
+    console.log(error)
 })
